@@ -1,0 +1,44 @@
+max_len: 5000
+
+# --- Encoder ---
+encoder:
+  d_model: 256
+  nhead: 4
+  num_layers: 6
+  dim_feedforward: 256
+  dropout: 0.1
+
+# --- Decoder ---
+decoder:
+  d_model: 256
+  nhead: 4
+  num_layers: 6
+  dim_feedforward: 256
+  dropout: 0.1
+
+
+# --- Predictor ---
+predictor:
+  d_model: 128
+  nhead: 4
+  num_layers: 4
+  dim_feedforward: 256
+  dropout: 0.1
+
+# --- Classifier ---
+classifier:
+  d_model: 128
+  nhead: 4
+  num_layers: 4
+  dim_feedforward: 256
+  dropout: 0.1
+
+
+
+# --- Critic ---
+critic:
+  d_model: 128
+  nhead: 4
+  num_layers: 4
+  dim_feedforward: 256
+  dropout: 0.1

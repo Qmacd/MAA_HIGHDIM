@@ -1,0 +1,126 @@
+assets:
+  all_assets:
+    - Copper
+    - Gold
+    - Crude_Oil
+    - Corn
+    - Soybean_Meal
+    - Cotton
+    - Sugar
+    - Iron_Ore
+    - Coke
+    - Hot_Rolled_Coil
+    - Rebar
+    - Thermal_Coal
+    - Methanol
+    - PTA
+    - PP
+    - PVC
+
+  asset_groups:
+    metals:
+      - Copper
+      - Gold
+      - Iron_Ore
+      - Coke
+      - Hot_Rolled_Coil
+      - Rebar
+
+    energy:
+      - Crude_Oil
+      - Thermal_Coal
+      - Methanol
+
+    agriculture:
+      - Corn
+      - Soybean_Meal
+      - Cotton
+      - Sugar
+
+    chemicals:
+      - PTA
+      - PP
+      - PVC
+
+    precious:
+      - Gold
+
+    base_metals:
+      - Copper
+      - Iron_Ore
+      - Coke
+      - Hot_Rolled_Coil
+      - Rebar
+
+    small_group:
+      - Copper
+      - Gold
+      - Crude_Oil
+
+    large_group:
+      - Copper
+      - Gold
+      - Crude_Oil
+      - Corn
+      - Soybean_Meal
+      - Cotton
+
+    all_gruop:
+      - Copper
+      - Gold
+      - Crude_Oil
+      - Corn
+      - Soybean_Meal
+      - Cotton
+      - Sugar
+      - Iron_Ore
+      - Coke
+      - Hot_Rolled_Coil
+      - Rebar
+      - Thermal_Coal
+      - Methanol
+      - PTA
+      - PP
+      - PVC
+
+experiments:
+  fusion_modes:
+    - concat
+    - attention
+    - gating
+
+  experiment_types:
+    - regression
+    - classification
+    - investment
+
+  pretrain_types:
+    - baseline
+    - supervised
+    - adversarial
+    - maa
+
+paths:
+  data_dir: data/processed
+  output_dir: output
+  results_dir: results
+  backtest_dir: backtest_results
+  models_dir: models
+
+pipeline:
+  skip_existing: true
+  max_parallel: 4
+  enable_backtest: true
+  enable_analysis: true
+
+  # 实验运行参数
+  experiment_params:
+    batch_size: 64
+    epochs: 100
+    learning_rate: 0.001
+
+  # 回测参数
+  backtest_params:
+    initial_cash: 2000000
+    start_date: "2000-01-01"
+    end_date: "2025-07-01"
